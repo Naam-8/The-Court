@@ -1,0 +1,68 @@
+import { IMAGES, gameCards } from "../constants";
+import GridBackground from "./GridBackground";
+
+function GameCard({ card }) {
+  return (
+    <div className="flex flex-col gap-4 sm:gap-6">
+      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-black/50">
+        <img
+          src={IMAGES[card.image]}
+          alt={card.title}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.style.display = "none";
+            const fallback = e.target.nextElementSibling;
+            if (fallback) fallback.classList.remove("hidden");
+          }}
+        />
+        <div className="hidden absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-muted text-center p-4">
+          <p className="text-sm">Add: public{IMAGES[card.image]}</p>
+        </div>
+      </div>
+      <div className="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl">
+        <h3 className="font-sans text-xl sm:text-2xl font-bold text-black">
+          {card.title}
+        </h3>
+        <p className="mt-2 sm:mt-3 font-sans text-black/90 text-sm sm:text-base leading-relaxed">
+          {card.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function GameSection() {
+  const [firstCard, ...restCards] = gameCards;
+
+  return (
+    <section id="game" className="mx-auto bg-black overflow-hidden relative">
+      <GridBackground />
+      <div className="relative z-10 px-4 py-10 sm:px-6 sm:py-12 lg:px-16 lg:py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-24 lg:items-start">
+          {/* Left column: header + first card in one column */}
+          <div className="flex flex-col gap-2 sm:gap-12 lg:gap-12">
+            <div className="mb-12 lg:mb-32">
+              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                The{" "}
+                <span className="text-bright-green font-serif italic">
+                  Game
+                </span>
+              </h2>
+              <p className="mt-2 sm:mt-3 font-sans text-muted text-base sm:text-lg">
+                Different ways to spend time on court.
+              </p>
+            </div>
+            <GameCard card={firstCard} />
+          </div>
+
+          {/* Right column: two cards stacked vertically */}
+          <div className="flex flex-col gap-10 sm:gap-16 lg:gap-24">
+            {restCards.map((card) => (
+              <GameCard key={card.title} card={card} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

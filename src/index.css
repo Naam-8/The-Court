@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/*
+ * Design system — Colors & Typography
+ *
+ * COLORS (use as Tailwind utilities):
+ *   bright-green  #A5FF7B  — primary accent
+ *   light-green   #D6FF9C  — secondary accent
+ *   white         #FFFFFF
+ *   black         #000000
+ *   muted         #CCCCCC  — sub-text, descriptions
+ *   bg-pale       #E3FFC2  — outer frame, pale lime
+ *
+ * Examples: bg-bright-green, text-muted, bg-bg-pale
+ *
+ * TYPOGRAPHY:
+ *   font-sans     Manrope (default) — headings, body
+ *   font-serif    Instrument Serif — accents, display
+ *
+ * Examples: font-sans, font-serif
+ */
+@theme {
+  --color-bright-green: #a5ff7b;
+  --color-light-green: #d6ff9c;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-muted: #cccccc;
+  --color-bg-pale: #e3ffc2;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-white);
+  background-color: var(--color-bg-pale);
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
