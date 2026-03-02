@@ -2,7 +2,7 @@ import { membershipPlans } from "../constants";
 
 export default function MembershipSection() {
   return (
-    <section id="membership" className="mx-auto mb-8 lg:mb-12">
+    <section id="membership" className="mx-auto">
       <div className="bg-white p-6 sm:p-10 lg:p-16 shadow-sm border border-black/5">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-black">

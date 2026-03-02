@@ -30,7 +30,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/90 hover:text-white text-sm font-medium transition-colors"
+              className="text-white/90 hover:text-bright-green text-sm font-medium transition-colors"
             >
               {link.label}
             </a>
@@ -44,11 +44,25 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           ) : (
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           )}

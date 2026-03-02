@@ -1,16 +1,19 @@
 export default function MemberFormSection() {
   return (
-    <section id="join" className="mx-auto mb-8 lg:mb-12">
-      <div className="rounded-[2.5rem] bg-bg-pale p-8 sm:p-12 lg:p-16">
+    <section id="join" className="mx-auto">
+      <div className="rounded-[2.5rem] bg-white p-8 sm:p-12 lg:p-16">
         <div className="max-w-md mx-auto">
           <h2 className="font-sans text-3xl sm:text-4xl font-bold text-black text-center">
-            Become Our Member
+            Become Our <span className="font-serif italic">Member</span>
           </h2>
-          <p className="mt-3 font-serif text-black/80 text-base sm:text-lg italic text-center">
+          <p className="mt-3 text-black/80 text-base sm:text-lg text-center">
             We&apos;ll be in touch shortly
           </p>
 
-          <form className="mt-10 space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="mt-10 space-y-6"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <input
               type="text"
               placeholder="Name"
@@ -35,7 +38,7 @@ export default function MemberFormSection() {
             </p>
             <button
               type="submit"
-              className="w-full py-4 rounded-full bg-black text-white font-sans font-semibold text-base hover:bg-black/90 transition-colors"
+              className="w-full py-4 rounded-full bg-bright-green text-black font-sans font-semibold text-base hover:bg-bg-pale transition-colors"
             >
               Submit
             </button>
