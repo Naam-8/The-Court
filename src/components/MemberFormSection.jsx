@@ -1,0 +1,47 @@
+export default function MemberFormSection() {
+  return (
+    <section id="join" className="mx-auto mb-8 lg:mb-12">
+      <div className="rounded-[2.5rem] bg-bg-pale p-8 sm:p-12 lg:p-16">
+        <div className="max-w-md mx-auto">
+          <h2 className="font-sans text-3xl sm:text-4xl font-bold text-black text-center">
+            Become Our Member
+          </h2>
+          <p className="mt-3 font-serif text-black/80 text-base sm:text-lg italic text-center">
+            We&apos;ll be in touch shortly
+          </p>
+
+          <form className="mt-10 space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full px-5 py-4 rounded-full font-sans text-black bg-white border border-black/10 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-bright-green transition-shadow"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full px-5 py-4 rounded-full font-sans text-black bg-white border border-black/10 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-bright-green transition-shadow"
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="w-full px-5 py-4 rounded-full font-sans text-black bg-white border border-black/10 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-bright-green transition-shadow"
+            />
+            <p className="text-center font-sans text-black/70 text-sm">
+              By submitting this form, you agree to our{" "}
+              <a href="#privacy" className="underline">
+                Privacy Policy
+              </a>
+              .
+            </p>
+            <button
+              type="submit"
+              className="w-full py-4 rounded-full bg-black text-white font-sans font-semibold text-base hover:bg-black/90 transition-colors"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
