@@ -17,53 +17,53 @@ export const navLinks = [
 
 export const gameCards = [
   {
-    title: "Match Play",
+    title: "Broadcast-native integration",
     description:
-      "Friendly or competitive – depending on the moment. Singles, doubles, or mixed matches with players from the club. A chance to play, enjoy the game, and share the court with others.",
+      "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
     image: "matchPlay",
   },
   {
-    title: "Coaching Sessions",
+    title: "Adaptive sponsorship at scale",
     description:
-      "Time on court with a coach. For technique, confidence, or simply a fresh look at your game. Supportive, calm, and focused on enjoyment – not pressure.",
+      "Serve tailored brand experiences across regions, audiences, and distribution channels while working from a single, consistent platform.",
     image: "coachingSessions",
   },
   {
-    title: "Open Court",
+    title: "Sports-specific intelligence",
     description:
-      "Free play during open court hours. A space to hit, move, and enjoy the court at your own pace. Play alone, with a partner, or join others on court.",
+      "Built with a deep understanding of tennis, badminton, squash, and table tennis, and tuned to work with existing broadcast workflows.",
     image: "openCourt",
   },
 ];
 
 export const membershipPlans = [
   {
-    title: "Play",
-    subtitle: "Time On Court, Without Extras",
+    title: "Rights holders & leagues",
+    subtitle: "Protect the sport, grow its value",
     features: [
-      "Access to club courts during open court hours",
-      "Participation in scheduled match play",
-      "Social and friendly games",
+      "New commercial inventory without changing the field of play",
+      "Region-specific feeds from a unified production",
+      "Tools designed for racquet sports calendars and formats",
     ],
     highlighted: false,
   },
   {
-    title: "Play & Coach",
-    subtitle: "Support When You Want It",
+    title: "Broadcasters",
+    subtitle: "Broadcast-first virtual advertising",
     features: [
-      "Full court access and match play",
-      "Coaching sessions (individual or small group)",
-      "Balance between guided and free play",
+      "Non-disruptive brand integration into live and replay workflows",
+      "Flexible templates for linear, OTT, and digital distribution",
+      "Operationally lightweight set-up with existing production teams",
     ],
     highlighted: false,
   },
   {
-    title: "Full Access",
-    subtitle: "Complete Freedom On Court",
+    title: "Sponsors & brands",
+    subtitle: "More relevant, more contextual",
     features: [
-      "Unlimited access to courts and match play",
-      "Coaching sessions and club activities",
-      "Priority booking and flexible scheduling",
+      "Context-aware brand presence around every rally",
+      "Audience and market-specific creative without re-shoots",
+      "Consistent presentation across tournaments and venues",
     ],
     highlighted: true,
   },

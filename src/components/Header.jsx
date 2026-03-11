@@ -21,7 +21,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             <path d="M3 15h18" />
           </svg>
           <span className="font-sans text-lg font-medium text-white">
-            The Court
+            Courtlay
           </span>
         </a>
 

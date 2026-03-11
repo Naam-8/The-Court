@@ -6,6 +6,8 @@ import GameSection from "./components/GameSection";
 import VirtualAdsSection from "./components/VirtualAdsSection";
 import MembershipSection from "./components/MembershipSection";
 import MemberFormSection from "./components/MemberFormSection";
+import FaqSection from "./components/FaqSection";
+import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 import GridBackground from "./components/GridBackground";
 
@@ -30,6 +32,8 @@ export default function App() {
       <GameSection />
       <MembershipSection />
       <VirtualAdsSection />
+      <FaqSection />
+      <CtaSection />
       <MemberFormSection />
       <Footer />
     </div>

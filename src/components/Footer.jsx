@@ -16,25 +16,25 @@ export default function Footer() {
                 href="#home"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                Home
+                Overview
               </a>
               <a
                 href="#about"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                About
+                About Courtlay
               </a>
               <a
                 href="#game"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                The Game
+                Platform
               </a>
               <a
                 href="#membership"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                Membership Plans
+                Who We Serve
               </a>
             </nav>
           </div>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 pt-8 border-t border-white/10">
           <p className="font-serif text-muted italic text-xl ">
-            Private courts. Curated schedule. Members only.
+            Creating more valuable, more relevant racquet sports broadcasts.
           </p>
           <div className="hidden lg:block"></div>
           <div className="hidden lg:block"></div>
@@ -69,18 +69,16 @@ export default function Footer() {
           <div className="hidden lg:block"></div>
           <div>
             <h4 className="font-sans text-sm font-medium text-muted uppercase tracking-wider mb-2">
-              Address
+              Company
             </h4>
             <p className="font-sans text-white">
-              215 Court Street
-              <br />
-              Brooklyn, NY 11201
+              Courtlay — Virtual advertising for racquet sports.
             </p>
           </div>
         </div>
 
         <h2 className="mt-4 font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-bright-green">
-          The Court
+          Courtlay
         </h2>
       </div>
     </footer>

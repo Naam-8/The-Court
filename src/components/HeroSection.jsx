@@ -5,25 +5,26 @@ export default function HeroSection() {
     <section className="mt-12 sm:mt-16 lg:mt-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
       <div>
         <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-bright-green leading-[1.1]">
-          Built for People
+          Smarter broadcasts
           <br />
-          Who Play
+          for racquet sports
         </h1>
         <p className="mt-6 font-serif text-muted text-lg sm:text-xl italic max-w-md">
-          Private courts. Curated schedule. Members only.
+          Courtlay is a sports technology company focused on transforming how
+          racquet sports are seen, experienced, and commercialized.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <a
             href="#join"
             className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-bright-green text-black font-sans font-semibold text-base hover:bg-light-green transition-colors"
           >
-            Join the Club
+            Talk to our team
           </a>
           <a
             href="#about"
             className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-bright-green text-white font-sans font-medium text-base hover:bg-bright-green/10 transition-colors"
           >
-            Learn More
+            Explore the platform
           </a>
         </div>
       </div>

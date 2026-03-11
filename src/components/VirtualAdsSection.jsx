@@ -12,13 +12,15 @@ export default function VirtualAdsSection() {
         <h2 className="text-center font-sans text-xl sm:text-2xl lg:text-3xl font-semibold tracking-wide text-white">
           How{" "}
           <span className="font-serif italic text-bright-green">
-            Virtual Ads
+            Courtlay Virtual Advertising
           </span>{" "}
-          Works?
+          works
         </h2>
 
-        <p className="text-center font-sans text-base sm:text-lg text-muted mt-4">
-          Virtual Ads is a new way to advertise your brand on the court.
+        <p className="text-center font-sans text-base sm:text-lg text-muted mt-4 max-w-2xl mx-auto">
+          Side-by-side views of the live court let you compare the original
+          broadcast with Courtlay&apos;s brand-integrated feed — preserving the
+          integrity of play while creating new sponsorship moments.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 sm:mt-20">

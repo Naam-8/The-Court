@@ -18,11 +18,11 @@ export default function BeforeAfterSlider() {
       <div className="relative aspect-5/4 rounded-2xl overflow-hidden bg-black/80">
         {/* AFTER layer (full) */}
         <div className="absolute inset-0">
-          <div className="w-full h-full bg-slate-900 flex items-center justify-center text-center px-4">
-            <span className="font-sans text-sm sm:text-base text-muted">
-              AFTER IMAGE PLACEHOLDER
-            </span>
-          </div>
+          <img
+            src="/images/giphy.gif"
+            alt="After"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* BEFORE layer (clipped by slider position) */}
@@ -30,11 +30,11 @@ export default function BeforeAfterSlider() {
           className="absolute inset-0 overflow-hidden"
           style={{ width: `${position}%` }}
         >
-          <div className="w-full h-full bg-bg-pale flex items-center justify-center text-center px-4">
-            <span className="font-sans text-sm sm:text-base text-black/90">
-              BEFORE IMAGE PLACEHOLDER
-            </span>
-          </div>
+          <img
+            src="/images/giphy (1).gif"
+            alt="Before"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Center divider */}
