@@ -5,12 +5,34 @@ import { useState } from "react";
  *
  * Simple before/after comparison slider with placeholders.
  * Later, replace the inner placeholder divs with real <img> tags.
+ *
+ * Props:
+ * - beforeSrc: optional URL for the "before" image
+ * - afterSrc: optional URL for the "after" image
+ *   If not provided, defaults to the existing GIFs.
  */
-export default function BeforeAfterSlider() {
+export default function BeforeAfterSlider({
+  beforeSrc = "/images/giphy (1).gif",
+  afterSrc = "/images/giphy.gif",
+}) {
   const [position, setPosition] = useState(50); // percentage
+  const [currentBeforeSrc, setCurrentBeforeSrc] = useState(beforeSrc);
+  const [currentAfterSrc, setCurrentAfterSrc] = useState(afterSrc);
 
   const handleChange = (event) => {
     setPosition(Number(event.target.value));
+  };
+
+  const handleBeforeError = () => {
+    if (currentBeforeSrc !== "/images/giphy (1).gif") {
+      setCurrentBeforeSrc("/images/giphy (1).gif");
+    }
+  };
+
+  const handleAfterError = () => {
+    if (currentAfterSrc !== "/images/giphy.gif") {
+      setCurrentAfterSrc("/images/giphy.gif");
+    }
   };
 
   return (
@@ -19,20 +41,22 @@ export default function BeforeAfterSlider() {
         {/* AFTER layer (full) */}
         <div className="absolute inset-0">
           <img
-            src="/images/giphy.gif"
+            src={currentAfterSrc}
             alt="After"
+            onError={handleAfterError}
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* BEFORE layer (clipped by slider position) */}
+        {/* BEFORE layer (clipped by slider position, not resized) */}
         <div
           className="absolute inset-0 overflow-hidden"
-          style={{ width: `${position}%` }}
+          style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
           <img
-            src="/images/giphy (1).gif"
+            src={currentBeforeSrc}
             alt="Before"
+            onError={handleBeforeError}
             className="w-full h-full object-cover"
           />
         </div>

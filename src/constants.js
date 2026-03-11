@@ -5,6 +5,9 @@ export const IMAGES = {
   matchPlay: "/images/match-play.png",
   coachingSessions: "/images/coaching-sessions.png",
   openCourt: "/images/open-court.png",
+  matchPlayAfter: "/images/match-play-after.png",
+  coachingSessionsAfter: "/images/coaching-sessions-after.png",
+  openCourtAfter: "/images/open-court-after.png",
   tennisRacket: "/images/tennis-racket-1.png",
 };
 
@@ -20,19 +23,22 @@ export const gameCards = [
     title: "Broadcast-native integration",
     description:
       "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
-    image: "matchPlay",
+    beforeSrc: IMAGES.matchPlay,
+    afterSrc: IMAGES.matchPlayAfter,
   },
   {
     title: "Adaptive sponsorship at scale",
     description:
       "Serve tailored brand experiences across regions, audiences, and distribution channels while working from a single, consistent platform.",
-    image: "coachingSessions",
+    beforeSrc: IMAGES.coachingSessions,
+    afterSrc: IMAGES.coachingSessionsAfter,
   },
   {
     title: "Sports-specific intelligence",
     description:
       "Built with a deep understanding of tennis, badminton, squash, and table tennis, and tuned to work with existing broadcast workflows.",
-    image: "openCourt",
+    beforeSrc: IMAGES.openCourt,
+    afterSrc: IMAGES.openCourtAfter,
   },
 ];
 

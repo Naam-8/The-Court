@@ -1,22 +1,17 @@
 import { IMAGES, gameCards } from "../constants";
 import GridBackground from "./GridBackground";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 
 function GameCard({ card }) {
   return (
     <div className="flex flex-col gap-4 sm:gap-6">
       <div className="relative aspect-16/10 rounded-2xl overflow-hidden bg-black/50">
-        <img
-          src={IMAGES[card.image]}
-          alt={card.title}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = "none";
-            const fallback = e.target.nextElementSibling;
-            if (fallback) fallback.classList.remove("hidden");
-          }}
+        <BeforeAfterSlider
+          beforeSrc={card.beforeSrc}
+          afterSrc={card.afterSrc}
         />
         <div className="absolute inset-0 hidden flex-col items-center justify-center bg-black/70 text-muted text-center p-4">
-          <p className="text-sm">Add: public{IMAGES[card.image]}</p>
+          <p className="text-sm">Add: public{card.beforeSrc}</p>
         </div>
       </div>
       <div className="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl">
