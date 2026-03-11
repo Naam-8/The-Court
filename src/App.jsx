@@ -33,11 +33,11 @@ export default function App() {
      
       <GameSection />
       <SportsLogosSection />
+      <VirtualAdsSection />
       <CourtGallerySection />
       {/* <MembershipSection /> */}
-      <VirtualAdsSection />
       <FaqSection />
-      <ClubSection />
+      {/* <ClubSection /> */}
       <CtaSection />
       <MemberFormSection />
       <Footer />

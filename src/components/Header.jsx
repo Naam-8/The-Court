@@ -39,7 +39,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             href="#join"
             className="inline-flex items-center justify-center px-3 py-2 rounded-full bg-bright-green text-black font-sans font-medium text-xs sm:text-sm hover:bg-light-green transition-colors whitespace-nowrap"
           >
-            Request a presentation
+            Talk to our team
           </a>
         </nav>
 
@@ -87,6 +87,13 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
               {link.label}
             </a>
           ))}
+          <a
+            href="#join"
+            onClick={() => setMobileMenuOpen(false)}
+            className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-bright-green text-black font-sans font-medium text-sm hover:bg-light-green transition-colors whitespace-nowrap"
+          >
+            Talk to our team
+          </a>
         </nav>
       )}
     </>
