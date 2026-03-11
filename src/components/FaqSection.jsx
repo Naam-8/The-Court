@@ -27,7 +27,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="mx-auto bg-white">
+    <section id="faq" className="mx-auto bg-white">
       <div className="px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-20 max-w-5xl mx-auto">
         <h2 className="text-center font-sans text-xl sm:text-2xl lg:text-3xl font-semibold tracking-wide text-black">
           Frequently asked <span className="font-serif italic">questions</span>

@@ -2,7 +2,10 @@ import { IMAGES } from "../constants";
 
 export default function HeroSection() {
   return (
-    <section className="mt-10 sm:mt-14 lg:mt-20 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+    <section
+      id="home"
+      className="mt-10 sm:mt-14 lg:mt-20 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center"
+    >
       <div>
         <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-bright-green leading-tight">
           Smarter racquet

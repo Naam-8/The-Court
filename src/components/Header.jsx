@@ -36,10 +36,10 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             </a>
           ))}
           <a
-            href="#join"
+            href="#cta"
             className="inline-flex items-center justify-center px-3 py-2 rounded-full bg-bright-green text-black font-sans font-medium text-xs sm:text-sm hover:bg-light-green transition-colors whitespace-nowrap"
           >
-            Talk to our team
+            Request presentation
           </a>
         </nav>
 
@@ -88,11 +88,11 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
             </a>
           ))}
           <a
-            href="#join"
+            href="#cta"
             onClick={() => setMobileMenuOpen(false)}
             className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-bright-green text-black font-sans font-medium text-sm hover:bg-light-green transition-colors whitespace-nowrap"
           >
-            Talk to our team
+            Request presentation
           </a>
         </nav>
       )}

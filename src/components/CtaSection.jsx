@@ -1,6 +1,7 @@
+
 export default function CtaSection() {
   return (
-    <section className="mx-auto">
+    <section id="cta" className="mx-auto">
       <div className="relative overflow-hidden bg-black">
         <div className="px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-14 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
@@ -13,7 +14,7 @@ export default function CtaSection() {
             </p>
           </div>
           <a
-            href="#join"
+            href="#cta"
             className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-bright-green text-black font-sans font-semibold text-sm sm:text-base hover:bg-light-green transition-colors whitespace-nowrap"
           >
             Request a presentation

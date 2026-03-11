@@ -5,23 +5,26 @@ const GALLERY_ITEMS = [
   {
     image: "matchPlay",
     sport: "Tennis",
-    caption: "Live match broadcast integration — court surfaces ready for virtual placement",
+    caption:
+      "Live match broadcast integration — court surfaces ready for virtual placement",
   },
   {
     image: "coachingSessions",
     sport: "Badminton",
-    caption: "Adaptive sponsorship delivered seamlessly across regions and audiences",
+    caption:
+      "Adaptive sponsorship delivered seamlessly across regions and audiences",
   },
   {
     image: "openCourt",
     sport: "Squash · Table Tennis",
-    caption: "Sports-specific surface intelligence built for racquet sport environments",
+    caption:
+      "Sports-specific surface intelligence built for racquet sport environments",
   },
 ];
 
 export default function CourtGallerySection() {
   return (
-    <section className="bg-black overflow-hidden relative">
+    <section id="court-gallery" className="bg-black overflow-hidden relative">
       <GridBackground />
       <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-20 max-w-7xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
@@ -30,7 +33,8 @@ export default function CourtGallerySection() {
             <span className="font-serif italic text-bright-green">at work</span>
           </h2>
           <p className="mt-3 font-sans text-muted text-base sm:text-lg max-w-2xl mx-auto">
-            Real court environments across racquet sports — seamlessly enhanced for broadcast.
+            Real court environments across racquet sports — seamlessly enhanced
+            for broadcast.
           </p>
         </div>
 
@@ -39,7 +43,12 @@ export default function CourtGallerySection() {
             <div
               key={item.sport}
               className="relative rounded-2xl overflow-hidden bg-white/5 w-full"
-              style={{ height: index === 0 ? "clamp(180px, 30vw, 360px)" : "clamp(140px, 22vw, 280px)" }}
+              style={{
+                height:
+                  index === 0
+                    ? "clamp(180px, 30vw, 360px)"
+                    : "clamp(140px, 22vw, 280px)",
+              }}
             >
               <img
                 src={IMAGES[item.image]}

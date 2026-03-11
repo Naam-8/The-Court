@@ -30,7 +30,6 @@ export default function App() {
         </div>
       </div>
 
-     
       <GameSection />
       <SportsLogosSection />
       <VirtualAdsSection />

@@ -13,9 +13,13 @@ export const IMAGES = {
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Solutions", href: "#game" },
-  { label: "Who We Serve", href: "#membership" },
+  { label: "Virtual Ads", href: "#virtual-ads" },
+  // { label: "Court Gallery", href: "#court-gallery" },
+  // { label: "Who We Serve", href: "#membership" },
+  { label: "Connect", href: "#join" },
+  // { label: "Club", href: "#about" },
+  // { label: "Cta", href: "#cta" },
 ];
 
 export const gameCards = [
