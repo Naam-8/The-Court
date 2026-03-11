@@ -4,8 +4,11 @@ export default function MemberFormSection() {
       <div className="rounded-[2.5rem] bg-white p-8 sm:p-12 lg:p-16">
         <div className="max-w-md mx-auto">
           <h2 className="font-sans text-3xl sm:text-4xl font-bold text-black text-center">
-            Start a <span className="font-serif italic">conversation</span> with
-            Courtlay
+            Start a{" "}
+            <span className="font-serif italic text-dark-green">
+              conversation
+            </span>{" "}
+            with Courtlay
           </h2>
           <p className="mt-3 text-black/80 text-base sm:text-lg text-center">
             Share a few details and we&apos;ll follow up about how Courtlay can

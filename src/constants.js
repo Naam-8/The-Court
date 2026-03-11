@@ -13,7 +13,7 @@ export const IMAGES = {
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Solutions", href: "#game" },
+  { label: "Solutions", href: "#solutions" },
   { label: "Virtual Ads", href: "#virtual-ads" },
   // { label: "Court Gallery", href: "#court-gallery" },
   // { label: "Who We Serve", href: "#membership" },

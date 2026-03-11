@@ -19,19 +19,13 @@ export default function Footer() {
                 Overview
               </a>
               <a
-                href="#about"
-                className="font-sans text-white hover:text-bright-green transition-colors"
-              >
-                About Courtlay
-              </a>
-              <a
-                href="#game"
+                href="#solutions"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
                 Platform
               </a>
               <a
-                href="#membership"
+                href="#join"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
                 Who We Serve

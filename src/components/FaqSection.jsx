@@ -30,7 +30,8 @@ export default function FaqSection() {
     <section id="faq" className="mx-auto bg-white">
       <div className="px-4 py-12 sm:px-6 sm:py-16 lg:px-16 lg:py-20 max-w-5xl mx-auto">
         <h2 className="text-center font-sans text-xl sm:text-2xl lg:text-3xl font-semibold tracking-wide text-black">
-          Frequently asked <span className="font-serif italic">questions</span>
+          Frequently asked{" "}
+          <span className="font-serif italic text-dark-green">questions</span>
         </h2>
         <div className="mt-10 sm:mt-12 divide-y divide-black/10 border-t border-b border-black/10">
           {FAQ_ITEMS.map((item, index) => {

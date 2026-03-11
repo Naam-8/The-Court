@@ -30,7 +30,10 @@ export default function GameSection() {
   const [firstCard, ...restCards] = gameCards;
 
   return (
-    <section id="game" className="mx-auto bg-black overflow-hidden relative">
+    <section
+      id="solutions"
+      className="mx-auto bg-black overflow-hidden relative"
+    >
       <GridBackground />
       <div className="relative z-10 px-4 py-10 sm:px-6 sm:py-12 lg:px-16 lg:py-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-24 lg:items-start">
