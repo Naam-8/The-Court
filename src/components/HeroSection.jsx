@@ -2,51 +2,42 @@ import { IMAGES } from "../constants";
 
 export default function HeroSection() {
   return (
-    <section className="mt-12 sm:mt-16 lg:mt-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <section className="mt-10 sm:mt-14 lg:mt-20 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
       <div>
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-bright-green leading-[1.1]">
-          Smarter broadcasts
+        <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-bright-green leading-tight">
+          Smarter racquet
           <br />
-          for racquet sports
+          sport broadcasts
         </h1>
-        <p className="mt-6 font-serif text-muted text-lg sm:text-xl italic max-w-md">
-          Courtlay is a sports technology company focused on transforming how
-          racquet sports are seen, experienced, and commercialized.
+        <p className="mt-3 font-serif text-muted text-base sm:text-lg italic max-w-xs sm:max-w-sm">
+          Virtual ads, built for the court.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+        <div className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a
             href="#join"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-bright-green text-black font-sans font-semibold text-base hover:bg-light-green transition-colors"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-bright-green text-black font-sans font-semibold text-xs sm:text-sm hover:bg-light-green transition-colors"
           >
             Talk to our team
           </a>
           <a
             href="#about"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-bright-green text-white font-sans font-medium text-base hover:bg-bright-green/10 transition-colors"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border-2 border-bright-green text-white font-sans font-medium text-xs sm:text-sm hover:bg-bright-green/10 transition-colors"
           >
             Explore the platform
           </a>
         </div>
       </div>
 
-      <div className="relative aspect-4/3 lg:aspect-square rounded-2xl overflow-hidden min-h-[240px]">
-        <img
-          src={IMAGES.hero}
-          alt="Tennis in motion"
+      <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
+        <video
           className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = "none";
-            const fallback = e.target.nextElementSibling;
-            if (fallback) fallback.classList.remove("hidden");
-          }}
+          src="/videos/court-original.mp4"
+          poster={IMAGES.hero}
+          autoPlay
+          muted
+          loop
+          playsInline
         />
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <img
-            src={IMAGES.tennisRacket}
-            alt="Tennis racket"
-            className="max-w-full max-h-full w-auto h-auto object-contain"
-          />
-        </div>
       </div>
     </section>
   );
