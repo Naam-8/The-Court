@@ -30,13 +30,14 @@ export default function App() {
         </div>
       </div>
 
-      <ClubSection />
+     
       <GameSection />
       <SportsLogosSection />
       <CourtGallerySection />
-      <MembershipSection />
+      {/* <MembershipSection /> */}
       <VirtualAdsSection />
       <FaqSection />
+      <ClubSection />
       <CtaSection />
       <MemberFormSection />
       <Footer />
