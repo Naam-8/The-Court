@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ClubSection from "./components/ClubSection";
 import GameSection from "./components/GameSection";
+import SportsLogosSection from "./components/SportsLogosSection";
+import CourtGallerySection from "./components/CourtGallerySection";
 import VirtualAdsSection from "./components/VirtualAdsSection";
 import MembershipSection from "./components/MembershipSection";
 import MemberFormSection from "./components/MemberFormSection";
@@ -30,6 +32,8 @@ export default function App() {
 
       <ClubSection />
       <GameSection />
+      <SportsLogosSection />
+      <CourtGallerySection />
       <MembershipSection />
       <VirtualAdsSection />
       <FaqSection />

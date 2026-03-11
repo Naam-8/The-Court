@@ -11,8 +11,8 @@ export const IMAGES = {
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "The Game", href: "#game" },
-  { label: "Membership Plans", href: "#membership" },
+  { label: "Solutions", href: "#game" },
+  { label: "Who We Serve", href: "#membership" },
 ];
 
 export const gameCards = [
