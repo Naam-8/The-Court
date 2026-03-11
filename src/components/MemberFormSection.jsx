@@ -1,7 +1,7 @@
 export default function MemberFormSection() {
   return (
     <section id="join" className="mx-auto">
-      <div className="rounded-[2.5rem] bg-white p-8 sm:p-12 lg:p-16">
+      <div className="bg-white p-8 sm:p-12 lg:p-16">
         <div className="max-w-md mx-auto">
           <h2 className="font-sans text-3xl sm:text-4xl font-bold text-black text-center">
             Start a{" "}
