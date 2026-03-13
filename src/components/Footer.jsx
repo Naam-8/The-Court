@@ -1,4 +1,5 @@
 import { Linkedin } from "lucide-react";
+import { IMAGES } from "../constants";
 import GridBackground from "./GridBackground";
 
 export default function Footer() {
@@ -28,7 +29,7 @@ export default function Footer() {
                 href="#join"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                Who We Serve
+                Connect
               </a>
             </nav>
           </div>
@@ -40,15 +41,10 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/company/courtlay/"
                 target="_blank"
-                className="font-sans text-white hover:text-bright-green transition-colors"
+                className="flex items-center gap-2 font-sans text-white hover:text-bright-green transition-colors font-semibold"
               >
                 <Linkedin size={20} fill="currentColor" />
-              </a>
-              <a
-                href="#instagram"
-                className="font-sans text-white hover:text-bright-green transition-colors font-semibold"
-              >
-                LinkedIn
+                <span className="text-xl">LinkedIn</span>
               </a>
             </nav>
           </div>
@@ -72,9 +68,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <h2 className="mt-4 font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-bright-green">
-          Courtlay
-        </h2>
+        <a href="/" className="">
+          <img src={IMAGES.logo} alt="Courtlay" className="w-full h-32 pt-10" />
+        </a>
       </div>
     </footer>
   );
