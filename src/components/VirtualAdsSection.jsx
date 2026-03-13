@@ -25,14 +25,10 @@ export default function VirtualAdsSection() {
 
         <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/60 shadow-xl">
-            <video
+            <img
               className="h-full w-full object-cover"
-              src="/videos/court-original.mp4"
-              poster={IMAGES.matchPlay}
-              autoPlay
-              muted
-              loop
-              playsInline
+              src="/images/comp_wad.gif"
+              alt="Original broadcast comparison"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
             <div className="pointer-events-none absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs sm:text-sm text-white/80 px-4 pb-1">
@@ -46,14 +42,10 @@ export default function VirtualAdsSection() {
           </div>
 
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-bright-green/40 bg-bright-green/5 shadow-[0_0_40px_rgba(74,222,128,0.35)]">
-            <video
+            <img
               className="h-full w-full object-cover"
-              src="/videos/court-courtlays.mp4"
-              poster={IMAGES.matchPlayAfter}
-              autoPlay
-              muted
-              loop
-              playsInline
+              src="/images/comp_ad.gif"
+              alt="Courtlay virtual feed comparison"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
             <div className="pointer-events-none absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs sm:text-sm text-white/80 px-4 pb-1">

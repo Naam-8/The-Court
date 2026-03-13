@@ -12,8 +12,8 @@ import { useState } from "react";
  *   If not provided, defaults to the existing GIFs.
  */
 export default function BeforeAfterSlider({
-  beforeSrc = "/images/slider_one_ad.jpeg",
-  afterSrc = "/images/slider_one_wad.jpeg",
+  beforeSrc = IMAGES.sliderOneWAd,
+  afterSrc = IMAGES.sliderOneAd,
 }) {
   const [position, setPosition] = useState(50); // percentage
   const [currentBeforeSrc] = useState(beforeSrc);
@@ -35,7 +35,7 @@ export default function BeforeAfterSlider({
 
   return (
     <div className="w-full mx-auto">
-      <div className="relative aspect-5/4 rounded-2xl overflow-hidden bg-black/80">
+      <div className="relative aspect-9/5 rounded-2xl overflow-hidden bg-black/80">
         {/* AFTER layer (full) */}
         <div className="absolute inset-0">
           {afterError ? (
@@ -43,12 +43,14 @@ export default function BeforeAfterSlider({
               After view not available
             </div>
           ) : (
-            <img
-              src={currentAfterSrc}
-              alt="After"
-              onError={handleAfterError}
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full h-full flex items-center justify-center bg-black">
+              <img
+                src={currentAfterSrc}
+                alt="After"
+                onError={handleAfterError}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           )}
         </div>
 
@@ -62,12 +64,14 @@ export default function BeforeAfterSlider({
               Before view not available
             </div>
           ) : (
-            <img
-              src={currentBeforeSrc}
-              alt="Before"
-              onError={handleBeforeError}
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full h-full flex items-center justify-center bg-black">
+              <img
+                src={currentBeforeSrc}
+                alt="Before"
+                onError={handleBeforeError}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           )}
         </div>
 

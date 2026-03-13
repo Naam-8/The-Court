@@ -37,7 +37,7 @@ export default function HeroSection() {
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
             <video
               className="w-full h-full object-cover"
-              src="/videos/court-original.mp4"
+              src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
               poster={IMAGES.hero}
               autoPlay
               muted
@@ -53,7 +53,7 @@ export default function HeroSection() {
         <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-black/60 shadow-[0_0_40px_rgba(74,222,128,0.35)]">
           <video
             className="w-full h-full object-cover"
-            src="/videos/court-original.mp4"
+            src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
             poster={IMAGES.hero}
             autoPlay
             muted

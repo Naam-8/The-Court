@@ -9,6 +9,11 @@ export const IMAGES = {
   coachingSessionsAfter: "/images/coaching-sessions-after.png",
   openCourtAfter: "/images/open-court-after.png",
   tennisRacket: "/images/tennis-racket-1.png",
+  sliderOneWAd: "/images/slider_one_wad.jpeg",
+  sliderOneAd: "/images/slider_one_ad.jpeg",
+  logo: "/images/Bayon.svg",
+  compWithAd: "/images/comp_ad.gif",
+  compWithoutAd: "/images/comp_wad.gif",
 };
 
 export const navLinks = [
@@ -27,8 +32,8 @@ export const gameCards = [
     title: "Broadcast-native integration",
     description:
       "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
-    beforeSrc: IMAGES.sliderOneAd,
-    afterSrc: IMAGES.sliderOneWad,
+    beforeSrc: IMAGES.sliderOneWAd,
+    afterSrc: IMAGES.sliderOneAd,
   },
   {
     title: "Broadcast-native integration",
@@ -43,13 +48,6 @@ export const gameCards = [
       "Serve tailored brand experiences across regions, audiences, and distribution channels while working from a single, consistent platform.",
     beforeSrc: IMAGES.coachingSessions,
     afterSrc: IMAGES.coachingSessionsAfter,
-  },
-  {
-    title: "Sports-specific intelligence",
-    description:
-      "Built with a deep understanding of tennis, badminton, squash, and table tennis, and tuned to work with existing broadcast workflows.",
-    beforeSrc: IMAGES.openCourt,
-    afterSrc: IMAGES.openCourtAfter,
   },
 ];
 

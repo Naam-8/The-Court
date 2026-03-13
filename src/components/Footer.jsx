@@ -1,4 +1,4 @@
-import { InstagramIcon } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import GridBackground from "./GridBackground";
 
 export default function Footer() {
@@ -36,18 +36,19 @@ export default function Footer() {
             <h4 className="font-sans text-sm font-medium text-muted uppercase tracking-wider mb-4">
               Connect
             </h4>
-            <nav className="flex gap-6">
+            <nav className="flex gap-2">
               <a
-                href="#x"
+                href="https://www.linkedin.com/company/courtlay/"
+                target="_blank"
                 className="font-sans text-white hover:text-bright-green transition-colors"
               >
-                <InstagramIcon />
+                <Linkedin size={20} fill="currentColor" />
               </a>
               <a
                 href="#instagram"
-                className="font-sans text-white hover:text-bright-green transition-colors"
+                className="font-sans text-white hover:text-bright-green transition-colors font-semibold"
               >
-                Instagram
+                LinkedIn
               </a>
             </nav>
           </div>

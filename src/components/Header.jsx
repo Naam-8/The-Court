@@ -1,28 +1,11 @@
-import { navLinks } from "../constants";
+import { navLinks, IMAGES } from "../constants";
 
 export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
   return (
     <>
       <header className="flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-white"
-          >
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <path d="M3 9h18" />
-            <path d="M3 15h18" />
-          </svg>
-          <span className="font-sans text-lg font-medium text-white">
-            Courtlay
-          </span>
+        <a href="/" className="">
+          <img src={IMAGES.logo} alt="Courtlay" className="w-full h-14" />
         </a>
 
         <nav className="hidden sm:flex items-center gap-8">
