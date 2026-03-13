@@ -5,65 +5,80 @@ export const IMAGES = {
   matchPlay: "/images/match-play.png",
   coachingSessions: "/images/coaching-sessions.png",
   openCourt: "/images/open-court.png",
+  matchPlayAfter: "/images/match-play-after.png",
+  coachingSessionsAfter: "/images/coaching-sessions-after.png",
+  openCourtAfter: "/images/open-court-after.png",
   tennisRacket: "/images/tennis-racket-1.png",
+  sliderOneWAd: "/images/slider_one_wad.jpeg",
+  sliderOneAd: "/images/slider_one_ad.jpeg",
+  logo: "/images/Bayon.svg",
+  compWithAd: "/images/comp_ad.gif",
+  compWithoutAd: "/images/comp_wad.gif",
 };
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "The Game", href: "#game" },
-  { label: "Membership Plans", href: "#membership" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "Virtual Ads", href: "#virtual-ads" },
+  // { label: "Court Gallery", href: "#court-gallery" },
+  // { label: "Who We Serve", href: "#membership" },
+  { label: "Connect", href: "#join" },
+  // { label: "Club", href: "#about" },
+  // { label: "Cta", href: "#cta" },
 ];
 
 export const gameCards = [
   {
-    title: "Match Play",
+    title: "Broadcast-native integration",
     description:
-      "Friendly or competitive – depending on the moment. Singles, doubles, or mixed matches with players from the club. A chance to play, enjoy the game, and share the court with others.",
-    image: "matchPlay",
+      "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
+    beforeSrc: IMAGES.sliderOneWAd,
+    afterSrc: IMAGES.sliderOneAd,
   },
   {
-    title: "Coaching Sessions",
+    title: "Broadcast-native integration",
     description:
-      "Time on court with a coach. For technique, confidence, or simply a fresh look at your game. Supportive, calm, and focused on enjoyment – not pressure.",
-    image: "coachingSessions",
+      "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
+    beforeSrc: IMAGES.matchPlay,
+    afterSrc: IMAGES.matchPlayAfter,
   },
   {
-    title: "Open Court",
+    title: "Adaptive sponsorship at scale",
     description:
-      "Free play during open court hours. A space to hit, move, and enjoy the court at your own pace. Play alone, with a partner, or join others on court.",
-    image: "openCourt",
+      "Serve tailored brand experiences across regions, audiences, and distribution channels while working from a single, consistent platform.",
+    beforeSrc: IMAGES.coachingSessions,
+    afterSrc: IMAGES.coachingSessionsAfter,
   },
 ];
 
 export const membershipPlans = [
   {
-    title: "Play",
-    subtitle: "Time On Court, Without Extras",
+    title: "Rights holders & leagues",
+    subtitle: "Protect the sport, grow its value",
     features: [
-      "Access to club courts during open court hours",
-      "Participation in scheduled match play",
-      "Social and friendly games",
+      "New commercial inventory without changing the field of play",
+      "Region-specific feeds from a unified production",
+      "Tools designed for racquet sports calendars and formats",
     ],
     highlighted: false,
   },
   {
-    title: "Play & Coach",
-    subtitle: "Support When You Want It",
+    title: "Broadcasters",
+    subtitle: "Broadcast-first virtual advertising",
     features: [
-      "Full court access and match play",
-      "Coaching sessions (individual or small group)",
-      "Balance between guided and free play",
+      "Non-disruptive brand integration into live and replay workflows",
+      "Flexible templates for linear, OTT, and digital distribution",
+      "Operationally lightweight set-up with existing production teams",
     ],
     highlighted: false,
   },
   {
-    title: "Full Access",
-    subtitle: "Complete Freedom On Court",
+    title: "Sponsors & brands",
+    subtitle: "More relevant, more contextual",
     features: [
-      "Unlimited access to courts and match play",
-      "Coaching sessions and club activities",
-      "Priority booking and flexible scheduling",
+      "Context-aware brand presence around every rally",
+      "Audience and market-specific creative without re-shoots",
+      "Consistent presentation across tournaments and venues",
     ],
     highlighted: true,
   },

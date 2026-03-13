@@ -2,49 +2,87 @@ import { IMAGES } from "../constants";
 
 export default function HeroSection() {
   return (
-    <section className="mt-12 sm:mt-16 lg:mt-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-      <div>
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-bright-green leading-[1.1]">
-          Built for People
-          <br />
-          Who Play
-        </h1>
-        <p className="mt-6 font-serif text-muted text-lg sm:text-xl italic max-w-md">
-          Private courts. Curated schedule. Members only.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#join"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-bright-green text-black font-sans font-semibold text-base hover:bg-light-green transition-colors"
-          >
-            Join the Club
-          </a>
-          <a
-            href="#about"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-bright-green text-white font-sans font-medium text-base hover:bg-bright-green/10 transition-colors"
-          >
-            Learn More
-          </a>
+    <section
+      id="home"
+      className="mt-10 sm:mt-14 lg:mt-20 px-4 sm:px-6 lg:px-16 mx-auto"
+    >
+      {/* Mobile layout – original stacked hero */}
+      <div className="block md:hidden">
+        <div className="grid gap-6 items-center">
+          <div>
+            <h1 className="font-sans text-3xl font-bold text-bright-green leading-tight">
+              Smarter racquet
+              <br />
+              sport broadcasts
+            </h1>
+            <p className="mt-3 font-serif text-muted text-base italic max-w-sm">
+              Virtual ads, built for the court.
+            </p>
+            <div className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href="#join"
+                className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-bright-green text-black font-sans font-semibold text-xs sm:text-sm hover:bg-light-green transition-colors cursor-pointer"
+              >
+                Talk to our team
+              </a>
+              <a
+                href="#solutions"
+                className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border-2 border-bright-green text-white font-sans font-medium text-xs sm:text-sm hover:bg-bright-green/10 transition-colors cursor-pointer"
+              >
+                Explore the platform
+              </a>
+            </div>
+          </div>
+
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
+            <video
+              className="w-full h-full object-cover"
+              src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
+              poster={IMAGES.hero}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
         </div>
       </div>
 
-      <div className="relative aspect-4/3 lg:aspect-square rounded-2xl overflow-hidden min-h-[240px]">
-        <img
-          src={IMAGES.hero}
-          alt="Tennis in motion"
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = "none";
-            const fallback = e.target.nextElementSibling;
-            if (fallback) fallback.classList.remove("hidden");
-          }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <img
-            src={IMAGES.tennisRacket}
-            alt="Tennis racket"
-            className="max-w-full max-h-full w-auto h-auto object-contain"
+      {/* Tablet and up – large video with bottom text overlay */}
+      <div className="hidden md:block">
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-black/60 shadow-[0_0_40px_rgba(74,222,128,0.35)]">
+          <video
+            className="w-full h-full object-cover"
+            src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
+            poster={IMAGES.hero}
+            autoPlay
+            muted
+            loop
+            playsInline
           />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+          <div className="absolute inset-x-6 bottom-6">
+            <h1 className="font-sans text-3xl lg:text-4xl font-bold text-bright-green leading-tight">
+              Smarter racquet sport broadcasts
+            </h1>
+            <p className="mt-2 font-serif text-base text-white/80 italic max-w-md">
+              Virtual ads, built for the court.
+            </p>
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href="#join"
+                className="inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-bright-green text-black font-sans font-semibold text-sm hover:bg-light-green transition-colors cursor-pointer"
+              >
+                Talk to our team
+              </a>
+              <a
+                href="#solutions"
+                className="inline-flex items-center justify-center px-7 py-2.5 rounded-full border-2 border-bright-green text-white font-sans font-medium text-sm hover:bg-bright-green/10 transition-colors cursor-pointer"
+              >
+                Explore the platform
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

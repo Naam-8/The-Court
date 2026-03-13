@@ -2,14 +2,16 @@ import { membershipPlans } from "../constants";
 
 export default function MembershipSection() {
   return (
-    <section id="membership" className="mx-auto mb-8 lg:mb-12">
+    <section id="membership" className="mx-auto">
       <div className="bg-white p-6 sm:p-10 lg:p-16 shadow-sm border border-black/5">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-black">
-            <span className="font-serif italic mr-1">Access </span>to the Club
+            <span className="font-serif italic mr-1">Built </span>for the racquet
+            sports ecosystem
           </h2>
           <p className="mt-3 font-sans text-black/80 text-base sm:text-lg">
-            Choose how you play. Different ways to access the game.
+            Courtlay is designed for rights holders, leagues, broadcasters, and
+            sponsors who want to unlock more from every match.
           </p>
         </div>
 
@@ -44,7 +46,7 @@ export default function MembershipSection() {
                     : "border-2 border-bright-green text-white hover:bg-bright-green/10"
                 }`}
               >
-                Join the Club
+                Talk to us
               </a>
             </div>
           ))}
