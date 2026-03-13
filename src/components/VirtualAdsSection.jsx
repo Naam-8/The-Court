@@ -41,7 +41,7 @@ export default function VirtualAdsSection() {
             </div>
           </div>
 
-          <div className="relative aspect-video rounded-2xl overflow-hidden border border-bright-green/40 bg-bright-green/5 shadow-[0_0_40px_rgba(74,222,128,0.35)]">
+          <div className="relative aspect-video rounded-2xl overflow-hidden border border-bright-green/40 bg-bright-green/5 shadow-[0_0_40px_rgba(255,107,107,0.35)]">
             <img
               className="h-full w-full object-cover"
               src="/images/comp_ad.gif"
