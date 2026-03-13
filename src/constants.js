@@ -27,6 +27,13 @@ export const gameCards = [
     title: "Broadcast-native integration",
     description:
       "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
+    beforeSrc: IMAGES.sliderOneAd,
+    afterSrc: IMAGES.sliderOneWad,
+  },
+  {
+    title: "Broadcast-native integration",
+    description:
+      "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
     beforeSrc: IMAGES.matchPlay,
     afterSrc: IMAGES.matchPlayAfter,
   },

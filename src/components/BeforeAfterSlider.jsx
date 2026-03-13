@@ -12,27 +12,25 @@ import { useState } from "react";
  *   If not provided, defaults to the existing GIFs.
  */
 export default function BeforeAfterSlider({
-  beforeSrc = "/images/giphy (1).gif",
-  afterSrc = "/images/giphy.gif",
+  beforeSrc = "/images/slider_one_ad.jpeg",
+  afterSrc = "/images/slider_one_wad.jpeg",
 }) {
   const [position, setPosition] = useState(50); // percentage
-  const [currentBeforeSrc, setCurrentBeforeSrc] = useState(beforeSrc);
-  const [currentAfterSrc, setCurrentAfterSrc] = useState(afterSrc);
+  const [currentBeforeSrc] = useState(beforeSrc);
+  const [currentAfterSrc] = useState(afterSrc);
+  const [beforeError, setBeforeError] = useState(false);
+  const [afterError, setAfterError] = useState(false);
 
   const handleChange = (event) => {
     setPosition(Number(event.target.value));
   };
 
   const handleBeforeError = () => {
-    if (currentBeforeSrc !== "/images/giphy (1).gif") {
-      setCurrentBeforeSrc("/images/giphy (1).gif");
-    }
+    setBeforeError(true);
   };
 
   const handleAfterError = () => {
-    if (currentAfterSrc !== "/images/giphy.gif") {
-      setCurrentAfterSrc("/images/giphy.gif");
-    }
+    setAfterError(true);
   };
 
   return (
@@ -40,12 +38,18 @@ export default function BeforeAfterSlider({
       <div className="relative aspect-5/4 rounded-2xl overflow-hidden bg-black/80">
         {/* AFTER layer (full) */}
         <div className="absolute inset-0">
-          <img
-            src={currentAfterSrc}
-            alt="After"
-            onError={handleAfterError}
-            className="w-full h-full object-cover"
-          />
+          {afterError ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white text-sm">
+              After view not available
+            </div>
+          ) : (
+            <img
+              src={currentAfterSrc}
+              alt="After"
+              onError={handleAfterError}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
 
         {/* BEFORE layer (clipped by slider position, not resized) */}
@@ -53,12 +57,18 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 overflow-hidden"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
-          <img
-            src={currentBeforeSrc}
-            alt="Before"
-            onError={handleBeforeError}
-            className="w-full h-full object-cover"
-          />
+          {beforeError ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white text-sm">
+              Before view not available
+            </div>
+          ) : (
+            <img
+              src={currentBeforeSrc}
+              alt="Before"
+              onError={handleBeforeError}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
 
         {/* Center divider */}

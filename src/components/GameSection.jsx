@@ -5,7 +5,7 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 function GameCard({ card }) {
   return (
     <div className="flex flex-col gap-4 sm:gap-6">
-      <div className="relative aspect-16/10 rounded-2xl overflow-hidden bg-black/50">
+      <div className="relative aspect-16/9 rounded-2xl overflow-hidden bg-black/50">
         <BeforeAfterSlider
           beforeSrc={card.beforeSrc}
           afterSrc={card.afterSrc}
@@ -53,7 +53,7 @@ export default function GameSection() {
           </div>
           <div className="flex flex-col gap-10 sm:gap-16 lg:gap-24">
             {restCards.map((card) => (
-              <GameCard key={card.title} card={card} />
+              <GameCard key={card.title} card={firstCard} />
             ))}
           </div>
         </div>

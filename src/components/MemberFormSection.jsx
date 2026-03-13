@@ -1,4 +1,4 @@
-export default function MemberFormSection() {
+export default function MemberFormSection({ query = "", onQueryChange }) {
   return (
     <section id="join" className="mx-auto">
       <div className="bg-white p-8 sm:p-12 lg:p-16">
@@ -30,8 +30,10 @@ export default function MemberFormSection() {
               className="w-full px-5 py-4 rounded-full font-sans text-black bg-white border border-black/10 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-bright-green transition-shadow"
             />
             <input
-              type="tel"
-              placeholder="Phone Number"
+              type="text"
+              placeholder="Enter your query"
+              value={query}
+              onChange={(e) => onQueryChange?.(e.target.value)}
               className="w-full px-5 py-4 rounded-full font-sans text-black bg-white border border-black/10 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-bright-green transition-shadow"
             />
             <p className="text-center font-sans text-black/70 text-sm">
