@@ -14,6 +14,7 @@ export const IMAGES = {
   logo: "/images/Bayon.svg",
   compWithAd: "/images/comp_ad.gif",
   compWithoutAd: "/images/comp_wad.gif",
+  padel: "/images/padel.png",
 };
 
 export const navLinks = [
