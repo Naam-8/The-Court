@@ -1,7 +1,5 @@
 const SPORTS = [
-  { name: "Tennis", note: "Singles · Doubles · Grand Slam" },
-  { name: "Badminton", note: "BWF Tour · Olympics" },
-  { name: "Squash", note: "PSA World Tour" },
+  { name: "Padel", note: "World Padel Tour" },
   { name: "Table Tennis", note: "ITTF World Tour" },
 ];
 
@@ -10,7 +8,7 @@ export default function SportsLogosSection() {
     <section className="bg-white">
       <div className="px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16 border-t border-black/10">
         <p className="text-center font-sans text-base tracking-[0.25em] uppercase text-dark-green/80 mb-10 ">
-          Racquet sports we serve/sponsor
+          Racquet sports we serve
         </p>
         <div className="flex flex-wrap items-start justify-center gap-8 sm:gap-12 lg:gap-16 xl:gap-20">
           {SPORTS.map((sport) => (

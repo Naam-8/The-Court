@@ -3,16 +3,10 @@ import GridBackground from "./GridBackground";
 
 const GALLERY_ITEMS = [
   {
-    image: "matchPlay",
-    sport: "Tennis",
+    image: "padel",
+    sport: "Padel",
     caption:
-      "Live match broadcast integration — court surfaces ready for virtual placement",
-  },
-  {
-    image: "coachingSessions",
-    sport: "Badminton",
-    caption:
-      "Adaptive sponsorship delivered seamlessly across regions and audiences",
+      "Live match broadcast integration — court surfaces ready for virtual logo placement",
   },
   {
     image: "openCourt",
