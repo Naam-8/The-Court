@@ -73,7 +73,7 @@ function SocialIconLinks() {
 
 export default function Footer() {
   return (
-    <footer className="mx-auto bg-black overflow-hidden relative">
+    <footer id="footer" className="mx-auto bg-black overflow-hidden relative">
       <GridBackground />
       <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-16 lg:items-start pb-12 border-b border-white/10">
