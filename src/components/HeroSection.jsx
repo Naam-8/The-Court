@@ -34,7 +34,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
             <BeforeAfterSlider />
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
       {/* Tablet and up – large video with bottom text overlay */}
       <div className="hidden md:block">
-        <div className="relative w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-black/60 shadow-[0_0_40px_rgba(255,107,107,0.35)]">
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-black/60 shadow-[0_0_40px_rgba(255,107,107,0.35)]">
           <BeforeAfterSlider />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           <div className="absolute inset-x-6 bottom-6">
