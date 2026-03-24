@@ -2,32 +2,11 @@ import { IMAGES, gameCards } from "../constants";
 import GridBackground from "./GridBackground";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
-function GameCard({ card }) {
-  return (
-    <div className="flex flex-col gap-4 sm:gap-6">
-      <div className="relative aspect-16/9 rounded-2xl overflow-hidden bg-black/50">
-        <BeforeAfterSlider
-          beforeSrc={card.beforeSrc}
-          afterSrc={card.afterSrc}
-        />
-        <div className="absolute inset-0 hidden flex-col items-center justify-center bg-black/70 text-muted text-center p-4">
-          <p className="text-sm">Add: public{card.beforeSrc}</p>
-        </div>
-      </div>
-      <div className="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl">
-        <h3 className="font-sans text-xl sm:text-2xl font-bold text-black">
-          {card.title}
-        </h3>
-        <p className="mt-2 sm:mt-3 font-sans text-black/90 text-sm sm:text-base leading-relaxed">
-          {card.description}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function GameSection() {
-  const [firstCard, ...restCards] = gameCards;
+  const card = gameCards[0];
+  if (!card) {
+    return null;
+  }
 
   return (
     <section
@@ -36,25 +15,100 @@ export default function GameSection() {
     >
       <GridBackground />
       <div className="relative z-10 px-4 py-10 sm:px-6 sm:py-12 lg:px-16 lg:py-20 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-24 lg:items-start">
-          <div className="flex flex-col gap-2 sm:gap-12 lg:gap-12">
-            <div className="mb-12 lg:mb-32">
-              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-                Platform{" "}
-                <span className="text-bright-green font-serif italic">
-                  solutions
-                </span>
-              </h2>
-              <p className="mt-2 sm:mt-3 font-sans text-muted text-base sm:text-lg">
-                Core ways Courtlay creates value for racquet sports broadcasts.
+        <div className="mb-10 sm:mb-12 lg:mb-14">
+          <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Platform{" "}
+            <span className="text-bright-green font-serif italic">
+              solutions
+            </span>
+          </h2>
+          <p className="mt-2 sm:mt-3 font-sans text-muted text-base sm:text-lg max-w-2xl">
+            Core ways Courtlay creates value for racquet sports broadcasts.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 lg:items-start">
+          <div className="flex flex-col gap-6 sm:gap-8">
+            <div className="relative aspect-video sm:aspect-16/9 rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-xl">
+              <BeforeAfterSlider
+                beforeSrc={card.beforeSrc}
+                afterSrc={card.afterSrc}
+              />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] bg-gradient-to-t from-black/70 to-transparent pt-12 pb-3 px-4">
+                <div className="flex items-center justify-between text-[10px] sm:text-xs font-sans text-white/85">
+                  <span className="uppercase tracking-wide font-semibold">
+                    Drag to compare
+                  </span>
+                  <span className="text-white/60 hidden sm:inline">
+                    Clean feed · Brand-integrated
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl">
+              <h3 className="font-sans text-xl sm:text-2xl font-bold text-black">
+                {card.title}
+              </h3>
+              <p className="mt-2 sm:mt-3 font-sans text-black/90 text-sm sm:text-base leading-relaxed">
+                {card.description}
               </p>
             </div>
-            <GameCard card={firstCard} />
           </div>
-          <div className="flex flex-col gap-10 sm:gap-16 lg:gap-24">
-            {restCards.map((card) => (
-              <GameCard key={card.title} card={firstCard} />
-            ))}
+
+          <div className="flex flex-col gap-6 sm:gap-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-zinc-950/80 shadow-xl">
+              <img
+                src={IMAGES.skeletonPadel}
+                alt="Padel court diagram highlighting glass walls, mesh fencing, playing surface, and net as virtual advertising zones"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl">
+              <h3 className="font-sans text-xl sm:text-2xl font-bold text-black">
+                Placement{" "}
+                <span className="text-bright-green font-serif italic">
+                  strategy
+                </span>
+              </h3>
+              <p className="mt-2 sm:mt-3 font-sans text-black/90 text-sm sm:text-base leading-relaxed">
+                We align sponsor creative with broadcast-safe zones on the
+                court skeleton—so inserts read as part of the venue, not an
+                overlay on the sport.
+              </p>
+              <ul className="mt-4 sm:mt-5 space-y-2.5 font-sans text-sm sm:text-base text-black/85">
+                <li className="flex gap-2.5">
+                  <span className="text-bright-green font-bold shrink-0">
+                    ·
+                  </span>
+                  <span>
+                    <strong className="text-black">Glass facades</strong> —
+                    primary marquee virtual boards along sidelines and baseline.
+                  </span>
+                </li>
+                <li className="flex gap-2.5">
+                  <span className="text-bright-green font-bold shrink-0">
+                    ·
+                  </span>
+                  <span>
+                    <strong className="text-black">Mesh &amp; structure</strong>{" "}
+                    — secondary logo bands that read clearly on camera without
+                    competing with play.
+                  </span>
+                </li>
+                <li className="flex gap-2.5">
+                  <span className="text-bright-green font-bold shrink-0">
+                    ·
+                  </span>
+                  <span>
+                    <strong className="text-black">Surface &amp; net band</strong>{" "}
+                    — restrained in-venue marks tied to replays and key moments.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

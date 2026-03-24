@@ -15,6 +15,7 @@ export const IMAGES = {
   compWithAd: "/images/comp_ad.gif",
   compWithoutAd: "/images/comp_wad.gif",
   padel: "/images/padel.png",
+  skeletonPadel: "/images/skeleton_padel.png",
 };
 
 export const navLinks = [
@@ -35,20 +36,6 @@ export const gameCards = [
       "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
     beforeSrc: IMAGES.sliderOneWAd,
     afterSrc: IMAGES.sliderOneAd,
-  },
-  {
-    title: "Broadcast-native integration",
-    description:
-      "Seamlessly blend sponsor messaging into live racquet sports feeds without disrupting the rhythm of play or the clarity of the action.",
-    beforeSrc: IMAGES.matchPlay,
-    afterSrc: IMAGES.matchPlayAfter,
-  },
-  {
-    title: "Adaptive sponsorship at scale",
-    description:
-      "Serve tailored brand experiences across regions, audiences, and distribution channels while working from a single, consistent platform.",
-    beforeSrc: IMAGES.coachingSessions,
-    afterSrc: IMAGES.coachingSessionsAfter,
   },
 ];
 
