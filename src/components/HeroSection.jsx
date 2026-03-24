@@ -1,4 +1,4 @@
-import { IMAGES } from "../constants";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 
 export default function HeroSection() {
   return (
@@ -35,15 +35,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-white/5">
-            <video
-              className="w-full h-full object-cover"
-              src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
-              poster={IMAGES.hero}
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
+            <BeforeAfterSlider />
           </div>
         </div>
       </div>
@@ -51,15 +43,7 @@ export default function HeroSection() {
       {/* Tablet and up – large video with bottom text overlay */}
       <div className="hidden md:block">
         <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-bright-green/40 bg-black/60 shadow-[0_0_40px_rgba(255,107,107,0.35)]">
-          <video
-            className="w-full h-full object-cover"
-            src="https://packaged-media.redd.it/ds984md8mkw81/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773432000&s=4c11edb6d24b51f8176cc4005414b8194c149fd7"
-            poster={IMAGES.hero}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
+          <BeforeAfterSlider />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           <div className="absolute inset-x-6 bottom-6">
             <h1 className="font-sans text-3xl lg:text-4xl font-bold text-bright-green leading-tight">

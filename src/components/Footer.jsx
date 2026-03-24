@@ -1,9 +1,12 @@
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, TwitterIcon } from "lucide-react";
 import { IMAGES } from "../constants";
 import GridBackground from "./GridBackground";
 
 const linkClass =
   "font-sans text-sm font-medium text-white/90 hover:text-bright-green transition-colors";
+
+const CONTACT_EMAIL = "info@courtlay.com";
+const CONTACT_ADDRESS = "Mumbai, Maharashtra";
 
 const exploreLinks = [
   { href: "#home", label: "Overview" },
@@ -18,25 +21,25 @@ const legalLinks = [
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/",
-    label: "Facebook",
-    Icon: Facebook,
-    filled: false,
+    href: "https://x.com/Courtlay_",
+    label: "Twitter",
+    Icon: TwitterIcon,
+    filled: true,
   },
   {
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/courtlay/?hl=en",
     label: "Instagram",
     Icon: Instagram,
     filled: false,
   },
   {
-    href: "https://www.linkedin.com/company/courtlay/",
+    href: "https://www.linkedin.com/company/courtlay/?viewAsMember=true",
     label: "LinkedIn",
     Icon: Linkedin,
     filled: true,
   },
   {
-    href: "mailto:info@courtlay.com",
+    href: `mailto:${CONTACT_EMAIL}`,
     label: "Email",
     Icon: Mail,
     filled: false,
@@ -81,13 +84,35 @@ export default function Footer() {
             <p className="font-serif text-muted italic text-xl">
               Creating more valuable, more relevant racquet sports broadcasts.
             </p>
-            <div>
-              <h4 className="font-sans text-sm font-medium text-muted uppercase tracking-wider mb-2">
-                Company
-              </h4>
-              <p className="font-sans text-white">
-                Courtlay — Virtual advertising for racquet sports.
-              </p>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-sans text-sm font-medium text-muted uppercase tracking-wider mb-2">
+                  Company
+                </h4>
+                <p className="font-sans text-white">
+                  Courtlay — Virtual advertising for racquet sports.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-sans text-sm font-medium text-muted uppercase tracking-wider mb-2">
+                  Contact
+                </h4>
+                <ul className="list-none space-y-3 p-0 m-0">
+                  <li>
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className={`${linkClass} inline-block max-w-full break-words [overflow-wrap:anywhere]`}
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                  </li>
+                  <li>
+                    <address className="font-sans text-white leading-relaxed not-italic max-w-full break-words [overflow-wrap:anywhere]">
+                      {CONTACT_ADDRESS}
+                    </address>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 

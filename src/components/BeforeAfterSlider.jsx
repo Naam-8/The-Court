@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IMAGES } from "../constants";
 
 /**
  * BeforeAfterSlider
@@ -9,7 +10,7 @@ import { useState } from "react";
  * Props:
  * - beforeSrc: optional URL for the "before" image
  * - afterSrc: optional URL for the "after" image
- *   If not provided, defaults to the existing GIFs.
+ *   If not provided, defaults to the first hero slider images in constants.
  */
 export default function BeforeAfterSlider({
   beforeSrc = IMAGES.sliderOneWAd,
@@ -34,8 +35,8 @@ export default function BeforeAfterSlider({
   };
 
   return (
-    <div className="w-full mx-auto">
-      <div className="relative aspect-9/5 rounded-2xl overflow-hidden bg-black/80">
+    <div className="h-full w-full min-h-0">
+      <div className="relative h-full w-full overflow-hidden bg-black/80">
         {/* AFTER layer (full) */}
         <div className="absolute inset-0">
           {afterError ? (
@@ -43,18 +44,16 @@ export default function BeforeAfterSlider({
               After view not available
             </div>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-black">
-              <img
-                src={currentAfterSrc}
-                alt="After"
-                onError={handleAfterError}
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
+            <img
+              src={currentAfterSrc}
+              alt="After"
+              onError={handleAfterError}
+              className="absolute inset-0 size-full object-cover object-center"
+            />
           )}
         </div>
 
-        {/* BEFORE layer (clipped by slider position, not resized) */}
+        {/* BEFORE layer (clipped by slider position) */}
         <div
           className="absolute inset-0 overflow-hidden"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
@@ -64,26 +63,24 @@ export default function BeforeAfterSlider({
               Before view not available
             </div>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-black">
-              <img
-                src={currentBeforeSrc}
-                alt="Before"
-                onError={handleBeforeError}
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
+            <img
+              src={currentBeforeSrc}
+              alt="Before"
+              onError={handleBeforeError}
+              className="absolute inset-0 size-full object-cover object-center"
+            />
           )}
         </div>
 
         {/* Center divider */}
         <div
-          className="absolute top-0 bottom-0 w-px bg-white/80"
+          className="pointer-events-none absolute top-0 bottom-0 z-[1] w-px bg-white/80"
           style={{ left: `${position}%`, transform: "translateX(-50%)" }}
         />
 
         {/* Handle with arrows */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 flex items-center justify-center"
+          className="pointer-events-none absolute top-1/2 z-[1] flex items-center justify-center"
           style={{ left: `${position}%`, transform: "translate(-50%, -50%)" }}
         >
           <div className="h-10 w-10 rounded-full bg-white shadow-lg border border-black/10 flex items-center justify-center">
@@ -101,7 +98,7 @@ export default function BeforeAfterSlider({
           max="100"
           value={position}
           onChange={handleChange}
-          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize"
+          className="absolute inset-0 z-[2] w-full h-full cursor-ew-resize opacity-0"
           aria-label="Before/after comparison slider"
         />
       </div>

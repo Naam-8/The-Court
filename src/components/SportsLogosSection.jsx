@@ -10,14 +10,12 @@ export default function SportsLogosSection() {
         <p className="text-center font-sans text-base tracking-[0.25em] uppercase text-dark-green/80 mb-10 ">
           Racquet sports we serve
         </p>
+
         <div className="flex flex-wrap items-start justify-center gap-8 sm:gap-12 lg:gap-16 xl:gap-20">
           {SPORTS.map((sport) => (
             <div key={sport.name} className="text-center">
               <p className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-black/15 leading-none">
                 {sport.name}
-              </p>
-              <p className="mt-2 font-sans text-xs text-black/30 tracking-wide">
-                {sport.note}
               </p>
             </div>
           ))}
