@@ -23,7 +23,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
               href="#cta"
               className="inline-flex items-center justify-center px-3 py-2 rounded-full bg-bright-green text-black font-sans font-medium text-xs sm:text-sm hover:bg-light-green transition-colors whitespace-nowrap"
             >
-              Request presentation
+              Request Demo
             </a>
           </nav>
 

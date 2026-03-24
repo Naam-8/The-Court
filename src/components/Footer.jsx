@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, TwitterIcon } from "lucide-react";
 import { IMAGES } from "../constants";
 import GridBackground from "./GridBackground";
 
@@ -18,19 +18,19 @@ const legalLinks = [
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/",
-    label: "Facebook",
-    Icon: Facebook,
-    filled: false,
+    href: "https://x.com/Courtlay_",
+    label: "Twitter",
+    Icon: TwitterIcon,
+    filled: true,
   },
   {
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/courtlay/?hl=en",
     label: "Instagram",
     Icon: Instagram,
     filled: false,
   },
   {
-    href: "https://www.linkedin.com/company/courtlay/",
+    href: "https://www.linkedin.com/company/courtlay/?viewAsMember=true",
     label: "LinkedIn",
     Icon: Linkedin,
     filled: true,
