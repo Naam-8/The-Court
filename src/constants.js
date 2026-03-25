@@ -1,21 +1,26 @@
-// Image paths — add these files to /public/images/
+// Served via jsDelivr from GitHub (public/images on main). Source files live in /public/images/.
+const JSDELIVR_IMAGES_BASE =
+  "https://cdn.jsdelivr.net/gh/Naam-8/The-Court@main/public/images";
+
+const imageUrl = (filename) => `${JSDELIVR_IMAGES_BASE}/${filename}`;
+
 export const IMAGES = {
-  hero: "/images/hero-tennis.jpg",
-  clubBg: "/images/club-tennis-bg.png",
-  matchPlay: "/images/match-play.png",
-  coachingSessions: "/images/coaching-sessions.png",
-  openCourt: "/images/open-court.png",
-  matchPlayAfter: "/images/match-play-after.png",
-  coachingSessionsAfter: "/images/coaching-sessions-after.png",
-  openCourtAfter: "/images/open-court-after.png",
-  tennisRacket: "/images/tennis-racket-1.png",
-  sliderOneWAd: "/images/slider_one_wad.jpeg",
-  sliderOneAd: "/images/slider_one_ad.jpeg",
-  logo: "/images/Bayon.svg",
-  compWithAd: "/images/comp_ad.gif",
-  compWithoutAd: "/images/comp_wad.gif",
-  padel: "/images/padel.png",
-  skeletonPadel: "/images/skeleton_padel.png",
+  hero: imageUrl("hero-tennis.jpg"),
+  clubBg: imageUrl("club-tennis-bg.png"),
+  matchPlay: imageUrl("match-play.png"),
+  coachingSessions: imageUrl("coaching-sessions.png"),
+  openCourt: imageUrl("open-court.png"),
+  matchPlayAfter: imageUrl("match-play-after.png"),
+  coachingSessionsAfter: imageUrl("coaching-sessions-after.png"),
+  openCourtAfter: imageUrl("open-court-after.png"),
+  tennisRacket: imageUrl("tennis-racket-1.png"),
+  sliderOneWAd: imageUrl("slider_one_wad.jpeg"),
+  sliderOneAd: imageUrl("slider_one_ad.jpeg"),
+  logo: imageUrl("Bayon.svg"),
+  compWithAd: imageUrl("comp_ad.gif"),
+  compWithoutAd: imageUrl("comp_wad.gif"),
+  padel: imageUrl("padel.png"),
+  skeletonPadel: imageUrl("skeleton_padel.png"),
 };
 
 export const navLinks = [

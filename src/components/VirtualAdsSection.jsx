@@ -27,7 +27,7 @@ export default function VirtualAdsSection() {
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/60 shadow-xl">
             <img
               className="h-full w-full object-cover"
-              src="/images/comp_wad.gif"
+              src={IMAGES.compWithoutAd}
               alt="Original broadcast comparison"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
@@ -44,7 +44,7 @@ export default function VirtualAdsSection() {
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-bright-green/40 bg-bright-green/5 shadow-[0_0_40px_rgba(255,107,107,0.35)]">
             <img
               className="h-full w-full object-cover"
-              src="/images/comp_ad.gif"
+              src={IMAGES.compWithAd}
               alt="Courtlay virtual feed comparison"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
